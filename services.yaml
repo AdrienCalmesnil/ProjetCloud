@@ -45,9 +45,9 @@ spec:
     - name: http
       targetPort: 8080
       port: 80
-  type: ClusterIP
+  type: NodePort
   selector:
-    app: service1
+    app: myservice1
 ---
 apiVersion: v1
 kind: Service
@@ -58,8 +58,8 @@ spec:
     - name: http
       targetPort: 8080
       port: 80
-  type: ClusterIP
+  type: NodePort
   selector:
-    app: service2
+    app: myservice2
 ---
 
